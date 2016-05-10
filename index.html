@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solitaire</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+<body>
+<div id="settings">
+    <span>background</span>
+    <input id="background" class="background" type="range" value="background" max="10" min="1" step="1"/>
+    <span>table</span>
+    <input id="contrast" class="contrast" type="range" value="contrast" max="10" min="1" step="1"/>
+    <span id="cards">cards</span>
+    <div id="cardstyle">
+        <label for="cc1">
+            <input type="radio" class="radio" id="cc1" name="color"  checked="checked"/>
+            default
+        </label><br/>
+        <label for="cc2">
+            <input type="radio" class="radio" id="cc2" name="color"/>
+            white
+        </label><br/>
+        <label for="cc3">
+            <input type="radio" class="radio" id="cc3" name="color"/>
+            black
+        </label>
+    </div>
+</div>
+<div id="game_table">
+    <div id="foundation">
+        <div id="wrapper_deck_founds">
+            <div id="found1" class="card droppable home"><span class="ace_home">A</span></div>
+            <div id="found2" class="card droppable home"><span class="ace_home">A</span></div>
+            <div id="found3" class="card droppable home"><span class="ace_home">A</span></div>
+            <div id="found4" class="card droppable home"><span class="ace_home">A</span></div>
+        </div>
+        <div id="wrapper_deck_waste_pile">
+            <div id="waste_pile" class="card"></div>
+            <div id="deck" class="card full_back"></div>
+        </div>
+    </div>
+    <div id="table">
+        <div id="col7" class="droppable">
+            <div id="tab0"></div><!--<div id="tab0" class="card for_table_col7">-->
+            <div id="tab1"></div><!--<div id="tab1" class="card for_table_col6">-->
+            <div id="tab2"></div>
+            <div id="tab3"></div>
+            <div id="tab4"></div>
+            <div id="tab5"></div>
+            <div id="tab6"></div>
+        </div>
+        <div id="col6" class="droppable">
+            <div id="tab7"></div>
+            <div id="tab8"></div>
+            <div id="tab9"></div>
+            <div id="tab10"></div>
+            <div id="tab11"></div>
+            <div id="tab12"></div>
+        </div>
+        <div id="col5" class="droppable">
+            <div id="tab13"></div>
+            <div id="tab14"></div>
+            <div id="tab15"></div>
+            <div id="tab16"></div>
+            <div id="tab17"></div>
+        </div>
+        <div id="col4" class="droppable">
+            <div id="tab18"></div>
+            <div id="tab19"></div>
+            <div id="tab20"></div>
+            <div id="tab21"></div>
+        </div>
+        <div id="col3" class="droppable">
+            <div id="tab22"></div>
+            <div id="tab23"></div>
+            <div id="tab24"></div>
+        </div>
+        <div id="col2" class="droppable">
+            <div id="tab25"></div>
+            <div id="tab26"></div>
+        </div>
+        <div id="col1" class="droppable">
+            <div id="tab27"></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/settings.js"></script>
+<script src="js/deckInit.js"></script>
+<script src="js/shufflingDeck.js"></script>
+<script src="js/deckForTableInit.js"></script>
+<script src="js/topDeck.js"></script>
+<script src="js/founds.js"></script>
+<script src="js/dragEndForAllCards.js"></script>
+<script src="js/cardReturnAnimation.js"></script>
+<script src="js/dragAndDrop.js"></script>
+
+</body>
+</html>

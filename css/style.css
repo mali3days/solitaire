@@ -1,0 +1,955 @@
+body {
+    background: rgba(127, 255, 194, 0.84) url(../images/bg1.jpg) no-repeat fixed center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, serif;
+    transition-duration: .3s;
+}
+
+
+#settings span {
+    display: block;
+    margin: 30px 30px 0;
+    text-align: center;
+}
+
+#background,
+#contrast,
+#cardstyle {
+    margin-top: 20px;
+    margin-left: 10px;
+    z-index: 0;
+    transition: 1s;
+}
+
+#cardstyle {
+    top: 140px;
+    left: 10px;
+}
+
+.radio {
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+#settings {
+    position: absolute;
+    top: 25%;
+    background-color: white;
+    width: 180px;
+    height: 350px;
+    opacity: 0.07;
+    transition: 1s;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    border-radius: 0 20px 20px 0;
+}
+
+#settings #cardstyle {
+    display: block;
+    margin-top: 20px;
+}
+
+div#cardstyle label {
+    cursor: pointer;
+}
+
+#contrast:hover,
+#background:hover,
+#settings:hover,
+#cardstyle:hover {
+    opacity: 1;
+    transition: 1s;
+}
+
+input[type=range].contrast,
+input[type=range].background {
+    -webkit-appearance: none;
+    width: 160px;
+    margin: 10.6px 0;
+}
+input[type=range].contrast:focus,
+input[type=range].background:focus {
+    outline: none;
+}
+input[type=range].contrast::-webkit-slider-runnable-track,
+input[type=range].background::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6.8px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+input[type=range].contrast::-webkit-slider-thumb,
+input[type=range].background::-webkit-slider-thumb {
+    box-shadow: 1.1px 1.1px 1px #000000, 0 0 1.1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 28px;
+    width: 10px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10.8px;
+}
+input[type=range].contrast:focus::-webkit-slider-runnable-track,
+input[type=range].background:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
+}
+input[type=range].contrast::-moz-range-track,
+input[type=range].background::-moz-range-track {
+    width: 100%;
+    height: 6.8px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+input[type=range].contrast::-moz-range-thumb,
+input[type=range].background::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0 0 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 28px;
+    width: 10px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+#choose_styles{
+    position: fixed;
+    display: inline-block;
+    bottom: 0;
+    border-top: 3px solid #212733;
+    padding-top: 3px;
+    z-index: -1;
+    width: 100%;
+    height: 30px;
+    background-color: white;
+}
+
+#choose_styles span {
+    font-size: 12px;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.radio {
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: red;
+}
+
+
+
+
+#game_table {
+    background: url(../images/table1.jpg);;
+    position: relative;
+    width: 901px;
+    height: 600px;
+    margin: 20px auto 0;
+    border-radius: 20px;
+    transition-duration: .3s;
+}
+
+#foundation {
+    height: 150px;
+}
+
+#wrapper_deck_founds>div:nth-child(1),
+#wrapper_deck_founds>div:nth-child(2),
+#wrapper_deck_founds>div:nth-child(3),
+#wrapper_deck_founds>div:nth-child(4) {
+    position: absolute;
+    top: 25px;
+
+}
+
+#wrapper_deck_founds>div:nth-child(1), #col1 {
+    left: 50px;
+
+}
+#wrapper_deck_founds>div:nth-child(2), #col2 {
+    left: 165px;
+}
+
+#wrapper_deck_founds>div:nth-child(3), #col3 {
+    left: 290px;
+}
+
+#wrapper_deck_founds>div:nth-child(4), #col4 {
+    left: 420px;
+}
+
+.ace_home,
+#table::before,
+#col2::before,
+#col3::before,
+#col4::before,
+#col5::before,
+#col6::before,
+#col7::before {
+    display: block;
+    line-height: 120px;
+    text-align: center;
+    width: 75px;
+    height: 110px;
+    color: white;
+    font-size: 50px;
+    border: 5px double silver;
+    border-radius: 5px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    font-family: 'Merriweather', serif;
+
+}
+
+#table::before,
+#col2::before,
+#col3::before,
+#col4::before,
+#col5::before,
+#col6::before,
+#col7::before {
+    position: absolute;
+    content: 'K';
+}
+
+#table::before {
+    top: 10px;
+    left: 50px;
+}
+
+#deck {
+    position: absolute;
+    top: 25px;
+}
+
+#waste_pile {
+    position: absolute;
+    top: 25px;
+    overflow: hidden;
+}
+
+#waste_pile::after  {
+    position: absolute;
+    border: 5px double silver;
+    border-radius: 5px;
+    height: 110px;
+    width: 75px;
+    content: '';
+}
+
+
+.card {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    width: 85px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+#table {
+    position: relative;
+    width: 100%;
+    height: 455px;
+    /* border: 1px dashed white; */
+}
+
+#col7,
+#col6,
+#col5,
+#col4,
+#col3,
+#col2,
+#col1 {
+    position: absolute;
+    top: 10px;
+    width: 85px;
+    height: 120px;
+    /* border: 1px dashed white  */
+}
+
+
+
+#col5 {
+    left: 535px;
+}
+
+#col6,
+#waste_pile {
+    left: 655px;
+}
+
+#col7,
+#deck {
+    left: 775px;
+}
+
+
+
+#col7>div:nth-child(1),
+#col6>div:nth-child(1),
+#col5>div:nth-child(1),
+#col4>div:nth-child(1),
+#col3>div:nth-child(1),
+#col2>div:nth-child(1) {
+    position: absolute;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    width: 85px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+#col7>div:nth-child(2),
+#col6>div:nth-child(2),
+#col5>div:nth-child(2),
+#col4>div:nth-child(2),
+#col3>div:nth-child(2),
+#col2>div:nth-child(2) {
+    position: absolute;
+    top: 7px;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    width: 85px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+#col7>div:nth-child(3),
+#col6>div:nth-child(3),
+#col5>div:nth-child(3),
+#col4>div:nth-child(3),
+#col3>div:nth-child(3) {
+    position: absolute;
+    top: 14px;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    width: 85px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+#col7>div:nth-child(4),
+#col6>div:nth-child(4),
+#col5>div:nth-child(4),
+#col4>div:nth-child(4){
+    position: absolute;
+    top: 21px;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    width: 85px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+#col7>div:nth-child(5),
+#col6>div:nth-child(5),
+#col5>div:nth-child(5),
+#col4>div:nth-child(5) {
+    position: absolute;
+    top: 28px;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    width: 85px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+#col7>div:nth-child(6),
+#col6>div:nth-child(6) {
+    position: absolute;
+    top: 35px;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    width: 85px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+#col7>div:nth-child(7) {
+    position: absolute;
+    top: 42px;
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    width: 85px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+#col1>div:nth-child(1) {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#c2, #d2, #h2, #s2,
+#c3, #d3, #h3, #s3,
+#c4, #d4, #h4, #s4,
+#c5, #d5, #h5, #s5,
+#c6, #d6, #h6, #s6,
+#c7, #d7, #h7, #s7,
+#c8, #d8, #h8, #s8,
+#c9, #d9, #h9, #s9,
+#c10, #d10, #h10, #s10,
+#c11, #d11, #h11, #s11,
+#c12, #d12, #h12, #s12,
+#c13, #d13, #h13, #s13,
+#c14, #d14, #h14, #s14,
+.forAnimateSliceTopDeck,
+.full_back {
+    background: url(../images/Oxygen_origin.svg) no-repeat;
+    background-size: 1230px;
+    height: 120px;
+    width: 85px;
+
+    transition: background .5s;
+    transition-timing-function: step-end;
+}
+
+#h2, #h3, #h4, #h5, #h6, #h7, #h8, #h9, #h10, #h11, #h12, #h13, #h14 {
+    background-position-y: -7px;
+}
+
+#s2, #s3, #s4, #s5, #s6, #s7, #s8, #s9, #s10, #s11, #s12, #s13, #s14 {
+    background-position-y: -136px;
+}
+
+#d2, #d3, #d4, #d5, #d6, #d7, #d8, #d9, #d10, #d11, #d12, #d13, #d14 {
+    background-position-y: -265px;
+}
+
+#c2, #c3, #c4, #c5, #c6, #c7, #c8, #c9, #c10, #c11, #c12, #c13, #c14 {
+    background-position-y: -394px;
+}
+
+#h14, #s14, #d14, #c14 {
+    background-position-x: -7px;
+}
+
+#h2, #s2, #d2, #c2 {
+    background-position-x: -100px;
+}
+
+#h3, #s3, #d3, #c3 {
+    background-position-x: -194px;
+}
+
+#h4, #s4, #d4, #c4 {
+    background-position-x: -287px;
+}
+
+#h5, #s5, #d5, #c5 {
+    background-position-x: -379px;
+}
+
+#h6, #s6, #d6, #c6 {
+    background-position-x: -473px;
+}
+
+#h7, #s7, #d7, #c7 {
+    background-position-x: -566px;
+}
+
+#h8, #s8, #d8, #c8 {
+    background-position-x: -659px;
+}
+
+#h9, #s9, #d9, #c9 {
+    background-position-x: -752px;
+}
+
+#h10, #s10, #d10, #c10 {
+    background-position-x: -845px;
+}
+
+#h11, #s11, #d11, #c11 {
+    background-position-x: -938px;
+}
+
+#h12, #s12, #d12, #c12 {
+    background-position-x: -1032px;
+}
+
+#h13, #s13, #d13, #c13 {
+    background-position-x: -1125px;
+}
+
+.full_back {
+    background-position-x: -7px;
+    background-position-y: -523px;
+}
+
+#reload {
+    position: absolute;
+    left: 775px;
+    top: 25px;
+    background: url(../images/reload.png) no-repeat center;
+    background-size: 40px 40px;
+}
+
+.draggable {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.droppable {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+}
+
+.draggable:hover {
+    -webkit-transform: scale(1.009, 1.009);
+    transform: scale(1.009, 1.009);
+}
+
+/* styles for animate */
+.sliceToLeftTopDeck {   /* animate */
+    margin-left: -120px;
+    transition-property: margin-left;
+    transition-duration: .5s;
+    transition-timing-function: ease-out;
+}
+
+.forAnimateSliceTopDeck { /* avatar slicing */
+    position: absolute;
+    top: 25px;
+    left: 775px;
+    z-Index: 3;
+    border-radius: 5px;
+    background-position-x: -7px;
+    background-position-y: -523px;
+}
+
+.border_good {
+    box-shadow: 0 0 55px -13px silver;
+    border-radius: 5px;
+}
+
+.border_good div {
+    box-shadow: 0 0 55px -13px silver;
+    border-radius: 5px;
+}
+
+.border_bad {
+    box-shadow: 0 0 55px -13px red;
+    border-radius: 5px;
+}
+
+.border_bad div {
+    box-shadow: 0 2px 55px -13px red;
+    border-radius: 5px;
+}
+
+/* styles for animate */
+/* end of my styles */
+
+
+/* WHITE STYLE*/
+body.white #c2,
+body.white #d2,
+body.white #h2,
+body.white #s2,
+body.white #c3,
+body.white #d3,
+body.white #h3,
+body.white #s3,
+body.white #c4,
+body.white #d4,
+body.white #h4,
+body.white #s4,
+body.white #c5,
+body.white #d5,
+body.white #h5,
+body.white #s5,
+body.white #c6,
+body.white #d6,
+body.white #h6,
+body.white #s6,
+body.white #c7,
+body.white #d7,
+body.white #h7,
+body.white #s7,
+body.white #c8,
+body.white #d8,
+body.white #h8,
+body.white #s8,
+body.white #c9,
+body.white #d9,
+body.white #h9,
+body.white #s9,
+body.white #c10,
+body.white #d10,
+body.white #h10,
+body.white #s10,
+body.white #c11,
+body.white #d11,
+body.white #h11,
+body.white #s11,
+body.white #c12,
+body.white #d12,
+body.white #h12,
+body.white #s12,
+body.white #c13,
+body.white #d13,
+body.white #h13,
+body.white #s13,
+body.white #c14,
+body.white #d14,
+body.white #h14,
+body.white #s14,
+body.white .forAnimateSliceTopDeck,
+body.white .full_back {
+    background: url(../images/Oxygen_white.svg) no-repeat;
+    background-size: 1230px;
+    height: 120px;
+    width: 85px;
+}
+
+body.white #h2,
+body.white #h3,
+body.white #h4,
+body.white #h5,
+body.white #h6,
+body.white #h7,
+body.white #h8,
+body.white #h9,
+body.white #h10,
+body.white #h11,
+body.white #h12,
+body.white #h13,
+body.white #h14 {
+    background-position-y: -7px;
+}
+
+body.white #s2,
+body.white #s3,
+body.white #s4,
+body.white #s5,
+body.white #s6,
+body.white #s7,
+body.white #s8,
+body.white #s9,
+body.white #s10,
+body.white #s11,
+body.white #s12,
+body.white #s13,
+body.white #s14 {
+    background-position-y: -136px;
+}
+
+body.white #d2,
+body.white #d3,
+body.white #d4,
+body.white #d5,
+body.white #d6,
+body.white #d7,
+body.white #d8,
+body.white #d9,
+body.white #d10,
+body.white #d11,
+body.white #d12,
+body.white #d13,
+body.white #d14 {
+    background-position-y: -265px;
+}
+
+body.white #c2,
+body.white #c3,
+body.white #c4,
+body.white #c5,
+body.white #c6,
+body.white #c7,
+body.white #c8,
+body.white #c9,
+body.white #c10,
+body.white #c11,
+body.white #c12,
+body.white #c13,
+body.white #c14 {
+    background-position-y: -394px;
+}
+
+body.white #h14,body.white #s14,body.white #d14,body.white #c14 {
+    background-position-x: -7px;
+}
+
+body.white #h2,body.white #s2,body.white #d2,body.white #c2 {
+    background-position-x: -100px;
+}
+
+body.white #h3,body.white #s3,body.white #d3,body.white #c3 {
+    background-position-x: -194px;
+}
+
+body.white #h4,body.white #s4,body.white #d4,body.white #c4 {
+    background-position-x: -287px;
+}
+
+body.white #h5,body.white #s5,body.white #d5,body.white #c5 {
+    background-position-x: -379px;
+}
+
+body.white #h6,body.white #s6,body.white #d6,body.white #c6 {
+    background-position-x: -473px;
+}
+
+body.white #h7,body.white #s7,body.white #d7,body.white #c7 {
+    background-position-x: -566px;
+}
+
+body.white #h8,body.white #s8,body.white #d8,body.white #c8 {
+    background-position-x: -659px;
+}
+
+body.white #h9,body.white #s9,body.white #d9,body.white #c9 {
+    background-position-x: -752px;
+}
+
+body.white #h10,body.white #s10,body.white #d10,body.white #c10 {
+    background-position-x: -845px;
+}
+
+body.white #h11,body.white #s11,body.white #d11,body.white #c11 {
+    background-position-x: -938px;
+}
+
+body.white #h12,body.white #s12,body.white #d12,body.white #c12 {
+    background-position-x: -1032px;
+}
+
+body.white #h13,body.white #s13,body.white #d13,body.white #c13 {
+    background-position-x: -1125px;
+}
+
+body.white .full_back {
+    background-position-x: -7px;
+    background-position-y: -523px;
+}
+
+body.white .forAnimateSliceTopDeck { /* avatar slicing */
+    position: absolute;
+    top: 25px;
+    left: 775px;
+    z-Index: 3;
+    border-radius: 5px;
+    background-position-x: -7px;
+    background-position-y: -523px;
+}
+/* WHITE STYLE*/
+
+/* BLACK STYLE*/
+body.black #c2,
+body.black #d2,
+body.black #h2,
+body.black #s2,
+body.black #c3,
+body.black #d3,
+body.black #h3,
+body.black #s3,
+body.black #c4,
+body.black #d4,
+body.black #h4,
+body.black #s4,
+body.black #c5,
+body.black #d5,
+body.black #h5,
+body.black #s5,
+body.black #c6,
+body.black #d6,
+body.black #h6,
+body.black #s6,
+body.black #c7,
+body.black #d7,
+body.black #h7,
+body.black #s7,
+body.black #c8,
+body.black #d8,
+body.black #h8,
+body.black #s8,
+body.black #c9,
+body.black #d9,
+body.black #h9,
+body.black #s9,
+body.black #c10,
+body.black #d10,
+body.black #h10,
+body.black #s10,
+body.black #c11,
+body.black #d11,
+body.black #h11,
+body.black #s11,
+body.black #c12,
+body.black #d12,
+body.black #h12,
+body.black #s12,
+body.black #c13,
+body.black #d13,
+body.black #h13,
+body.black #s13,
+body.black #c14,
+body.black #d14,
+body.black #h14,
+body.black #s14,
+body.black .forAnimateSliceTopDeck,
+body.black .full_back {
+    background: url(../images/Oxygen_black.svg) no-repeat;
+    background-size: 1230px;
+    height: 120px;
+    width: 85px;
+}
+
+body.black #h2,
+body.black #h3,
+body.black #h4,
+body.black #h5,
+body.black #h6,
+body.black #h7,
+body.black #h8,
+body.black #h9,
+body.black #h10,
+body.black #h11,
+body.black #h12,
+body.black #h13,
+body.black #h14 {
+    background-position-y: -7px;
+}
+
+body.black #s2,
+body.black #s3,
+body.black #s4,
+body.black #s5,
+body.black #s6,
+body.black #s7,
+body.black #s8,
+body.black #s9,
+body.black #s10,
+body.black #s11,
+body.black #s12,
+body.black #s13,
+body.black #s14 {
+    background-position-y: -136px;
+}
+
+body.black #d2,
+body.black #d3,
+body.black #d4,
+body.black #d5,
+body.black #d6,
+body.black #d7,
+body.black #d8,
+body.black #d9,
+body.black #d10,
+body.black #d11,
+body.black #d12,
+body.black #d13,
+body.black #d14 {
+    background-position-y: -265px;
+}
+
+body.black #c2,
+body.black #c3,
+body.black #c4,
+body.black #c5,
+body.black #c6,
+body.black #c7,
+body.black #c8,
+body.black #c9,
+body.black #c10,
+body.black #c11,
+body.black #c12,
+body.black #c13,
+body.black #c14 {
+    background-position-y: -394px;
+}
+
+body.black #h14,body.black #s14,body.black #d14,body.black #c14 {
+    background-position-x: -7px;
+}
+
+body.black #h2,body.black #s2,body.black #d2,body.black #c2 {
+    background-position-x: -100px;
+}
+
+body.black #h3,body.black #s3,body.black #d3,body.black #c3 {
+    background-position-x: -194px;
+}
+
+body.black #h4,body.black #s4,body.black #d4,body.black #c4 {
+    background-position-x: -287px;
+}
+
+body.black #h5,body.black #s5,body.black #d5,body.black #c5 {
+    background-position-x: -379px;
+}
+
+body.black #h6,body.black #s6,body.black #d6,body.black #c6 {
+    background-position-x: -473px;
+}
+
+body.black #h7,body.black #s7,body.black #d7,body.black #c7 {
+    background-position-x: -566px;
+}
+
+body.black #h8,body.black #s8,body.black #d8,body.black #c8 {
+    background-position-x: -659px;
+}
+
+body.black #h9,body.black #s9,body.black #d9,body.black #c9 {
+    background-position-x: -752px;
+}
+
+body.black #h10,body.black #s10,body.black #d10,body.black #c10 {
+    background-position-x: -845px;
+}
+
+body.black #h11,body.black #s11,body.black #d11,body.black #c11 {
+    background-position-x: -938px;
+}
+
+body.black #h12,body.black #s12,body.black #d12,body.black #c12 {
+    background-position-x: -1032px;
+}
+
+body.black #h13,body.black #s13,body.black #d13,body.black #c13 {
+    background-position-x: -1125px;
+}
+
+body.black .full_back {
+    background-position-x: -7px;
+    background-position-y: -523px;
+}
+
+body.black .forAnimateSliceTopDeck { /* avatar slicing */
+    position: absolute;
+    top: 25px;
+    left: 775px;
+    z-Index: 3;
+    border-radius: 5px;
+    background-position-x: -7px;
+    background-position-y: -523px;
+}
+/* BLACK STYLE*/
